@@ -1,0 +1,25 @@
+<div>
+  <form [formGroup]="paForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="name">Pallindrome</label>
+      <input type="text" class="form-control"
+             name="PallindromeData" formControlName="PallindromeData"
+             [(ngModel)]="pallindrome.PallindromeData">
+      <div class="alert" *ngIf="paForm.controls.PallindromeData.errors">
+        {{paForm.controls.PallindromeData.errors['errorMsg'] }}
+      </div>
+
+
+    </div>
+
+
+    <button type="submit" class="btn btn-success">
+      Submit
+    </button>
+    <button type="reset" class="btn"
+            (click)="form.reset()">
+      Reset
+    </button>
+    <!--<pre>{{paForm.value | json}}</pre>-->
+  </form>
+</div>

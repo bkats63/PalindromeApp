@@ -1,0 +1,17 @@
+<h1>Pallindromes List</h1>
+
+
+<p *ngIf="!pallindromes"><em>Loading...</em></p>
+
+<table class='table' *ngIf="pallindromes">
+  <thead>
+    <tr>
+      <th>Pallindromes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pallindrome of pallindromes">
+      <td>{{ pallindrome.pallindromeData }}</td>
+    </tr>
+  </tbody>
+</table>
